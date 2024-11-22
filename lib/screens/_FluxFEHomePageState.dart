@@ -1,43 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
-import 'package:path_provider/path_provider.dart';
-// import 'package:file_picker/file_picker.dart';
-import 'dart:io';
-import 'dart:convert';
-import 'screens/FluxFEHomePage.dart';
-
-void main() {
-  runApp(FluxFEApp());
-}
-
-class FluxFEApp extends StatelessWidget {
-  
-  const FluxFEApp({super.key});
-  
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: FluxFEHomePage(),
-    );
-  }
-}
-
-// class FluxFEHomePage extends StatefulWidget {
-  
-//   const FluxFEHomePage({super.key});
-
-//     @override
-//   _FluxFEHomePageState createState() => _FluxFEHomePageState();
-// }
-
 class _FluxFEHomePageState extends State<FluxFEHomePage> {
-  
-  _FluxFEHomePageState();
-
   final TextEditingController _textController = TextEditingController();
   String _imageUrl = ''; // Holds the URL of the image to be displayed.
   final String _postUrl = 'https://api.bfl.ml/v1/flux-pro-1.1'; // Replace with your fixed URL
